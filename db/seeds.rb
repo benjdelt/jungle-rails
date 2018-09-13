@@ -34,7 +34,7 @@ cat3 = Category.find_or_create_by! name: 'Furniture'
 puts "Re-creating Products ..."
 
 Product.destroy_all
-
+ 
 cat1.products.create!({
   name:  'Men\'s Classy shirt',
   description: Faker::Hipster.paragraph(4),
@@ -131,6 +131,33 @@ cat3.products.create!({
   quantity: 23,
   price: 2_483.75
 })
+
+User.destroy_all
+
+User.create!(first_name: "Harvey", last_name: "Kutch", email: "Jamar58@gmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Cletus", last_name: "Gleichner", email: "Rosina.Reinger2@hotmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Mossie", last_name: "Walker", email: "Abbigail.Treutel65@yahoo.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Mervin", last_name: "Welch", email: "Braeden96@gmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Gonzalo", last_name: "Kuphal", email: "Oran.Bosco55@yahoo.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Raina", last_name: "Breitenberg", email: "Lyla.Watsica@hotmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Jayme", last_name: "McCullough", email: "Brannon29@hotmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Floy", last_name: "Veum", email: "Fritz_Rippin80@gmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Keven", last_name: "Franecki", email: "Kenny97@hotmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+User.create!(first_name: "Kevin", last_name: "Price", email: "Alfreda_Streich6@gmail.com", password_digest: "$2a$10$N7Iun7IZd5vea6wCXRTfX.z67INmEsyM3DEEy2RJ2NvQXjW8mspB6" )
+
+Review.destroy_all 
+
+Review.create!(description: "et omnis nulla", rating: 1, user_id: 5, product_id: 2 )
+Review.create!(description: "quisquam perferendis inventore", rating: 4, user_id: 8, product_id: 3 )
+Review.create!(description: "id provident et", rating: 4, user_id: 5, product_id: 4 )
+Review.create!(description: "qui consequuntur voluptatem", rating: 5, user_id: 5, product_id: 12 )
+Review.create!(description: "impedit ea rerum", rating: 5, user_id: 8, product_id: 5 )
+Review.create!(description: "et modi suscipit", rating: 3, user_id: 9, product_id: 7 )
+Review.create!(description: "aut optio culpa", rating: 3, user_id: 2, product_id: 6 )
+Review.create!(description: "doloremque qui rerum", rating: 1, user_id: 6, product_id: 2 )
+Review.create!(description: "nihil voluptatibus fugiat", rating: 1, user_id: 6, product_id: 6 )
+Review.create!(description: "aliquam vitae officia", rating: 3, user_id: 7, product_id: 10 )
+Review.create!(description: "aut rerum iure", rating: 5, user_id: 4, product_id: 1 )
 
 
 puts "DONE!"
