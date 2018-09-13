@@ -26,6 +26,27 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+
+      <div class="col-sm-8">
+          <h3>Reviews</h3>   
+          <ul>
+            <% @reviews.each do |review| %>
+              <li>
+                <div>
+                <h4>Review by <%= get_user(review.user_id)[0].first_name %><h4>
+                <p>Rating: <%= review.rating %>/5</p>
+                <p>Description: <%=review.description %></p>
+                <div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </article>
 
 </section>
