@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to '/login' unless current_user
-  end
+  end 
 
 
 
@@ -38,6 +38,10 @@ class ApplicationController < ActionController::Base
       expires: 10.days.from_now
     }
     cookies[:cart]
+  end
+
+  def enhanced_order
+    @enhanced_order = @enhanced_cart
   end
 
 end
