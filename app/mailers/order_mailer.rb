@@ -1,4 +1,4 @@
-class OrderMailer < ApplicationMailer
+class OrderMailer < ApplicationMailer 
 default from: 'no-reply@jungle.com'
 
   def order_email(order)
