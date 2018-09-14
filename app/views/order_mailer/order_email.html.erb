@@ -9,11 +9,11 @@
 
     <ul>
       <% @order.line_items.each do |item|%>
-        <li><%=item.quantity%>x <%= item.product.name %> for $ <%=item.product.price * 100 %> ($ <%= item.quantity  * item.product.price * 100 %> each) </li>
+        <li><%=item.quantity%>x <%= item.product.name %> for $ <%=item.product.price / 100 %> ($ <%= item.quantity  * item.product.price * 100 %> each) </li>
       <% end %>
     </ul>
     
-    <p>For a total of $<%= @order.total_cents * 100 %></p>>
+    <p>For a total of $<%= @order.total_cents / 100 %></p>>
 
     <p>Have a great day.</p>
    

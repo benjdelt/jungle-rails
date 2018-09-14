@@ -57,7 +57,8 @@
       </div>
 
       <div class="col-sm-8">
-          <h3>Reviews</h3>   
+          <h3>Reviews</h3>  
+          <p>Average Rating: <%= @average %>/5</p> 
           <ul>
             <% @reviews.reverse.each do |review| %>
               <li>
