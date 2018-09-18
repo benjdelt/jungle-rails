@@ -17,12 +17,19 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "They see a single product when they click a relevant link" do
     visit root_path
 
-    # commented out b/c it's for debugging only
-    # save_and_open_screenshot
+    click_link(@category.products[0].name)
 
-    expect(page).to have_css 'article.product'
+    puts "the name is: " + @category.products[0].name
+    # visit product_path(3)
+
+    # sleep 3
+    expect(page).to have_css '.product-detail'
+
+    save_and_open_screenshot
+
   end
-end
+
+end 
